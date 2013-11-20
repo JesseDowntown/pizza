@@ -14,11 +14,15 @@ module Pizza
 		end
 
 		def vegetarian?
-			if @toppings.any? { |topping| topping.vegetarian === false }
+			if @toppings.any? { |topping| topping.vegetarian === false}
 				return false
 			else
 				return true
 			end
+		end
+
+		def add_topping(topping)
+			@toppings << topping
 		end
 
 	end
