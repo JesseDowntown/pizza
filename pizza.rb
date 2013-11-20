@@ -1,9 +1,19 @@
 module Pizza
-  class Pie
+	class Pie
 
-  end
+	end
 
-  class Topping
+	class Topping
+		attr_accessor :name
 
-  end
+		# Instantiate a new topping.
+		# name - The String name of the topping.
+		# Returns a new Topping object.
+
+		def initialize(name)
+			@name = name
+		end
+		
+	end
+
 end
