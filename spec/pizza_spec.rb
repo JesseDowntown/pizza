@@ -47,6 +47,17 @@ describe Pizza::Pie do
       expect(pizza.toppings.size).to eq(2)
     end
   end
+
+  describe '#deliver!' do
+    it 'marks a delivery time attribute on the pizza for 30 minutes from now' do
+      pizza = Pizza::Pie.new()
+      now = Time.now
+      pizza.deliver!(now)
+
+      expect(pizza.delivery_time).to eq(now + 30*60)
+    end
+  end
+
 end 
 
 describe Pizza::Topping do
