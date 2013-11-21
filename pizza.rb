@@ -1,7 +1,7 @@
 module Pizza
 	class Pie
 
-		attr_accessor :toppings
+		attr_accessor :toppings, :delivery_time
 
 		# Instantiate a new pizza.
 		#
@@ -23,6 +23,10 @@ module Pizza
 
 		def add_topping(topping)
 			@toppings << topping
+		end
+
+		def deliver!(now = Time.now)
+			@delivery_time = (now + 30*60)
 		end
 
 	end
